@@ -16,5 +16,12 @@ export const useUnsplashRequest = ({
 			Authorization: `Client-ID ${process.env.REACT_APP_UNSPLASH_ACCESS_KEY}`,
 		},
 		data: data,
-	})
+	}).then(
+		res => {
+			console.log(res)
+		},
+		error => {
+			console.error(error)
+		}
+	)
 }

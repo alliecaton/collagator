@@ -1,16 +1,15 @@
 import React from 'react'
-import './App.css'
-import SearchBar from '@/components/SearchBar'
+import '@/styles/App.css'
+import Search from '@/components/Search'
+import AppHeader from '@/components/AppHeader'
 
 function App() {
 	return (
-		<div className='App'>
-			<header className='App-header'>
-				<h1>Collagator</h1>
+		<div className='app'>
+			<header className='app__header'>
+				<AppHeader />
 
-				<p>Photo randomizer for your digital collaging needs!</p>
-
-				<SearchBar />
+				<Search />
 			</header>
 		</div>
 	)
