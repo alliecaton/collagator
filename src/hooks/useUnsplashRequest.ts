@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-export const unsplashRequest = ({
+export const useUnsplashRequest = ({
 	method,
 	url,
 	data,
