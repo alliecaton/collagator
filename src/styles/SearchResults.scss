@@ -1,0 +1,15 @@
+.images {
+	display: flex;
+	gap: 15px;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.image {
+	border-radius: 4px;
+
+	&:hover {
+		cursor: pointer;
+		outline: solid 2px blue;
+	}
+}

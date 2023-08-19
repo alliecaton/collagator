@@ -6,9 +6,28 @@ body {
 }
 
 .app__header {
+	/* display: flex; */
+	/* align-items: center; */
+	/* flex-direction: column; */
+}
+
+.pill {
 	display: flex;
-	align-items: center;
-	flex-direction: column;
+	justify-content: space-between;
+	border: solid 1px #073b4c;
+	margin-bottom: 15px;
+}
+
+.pill__option {
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	padding: 20px;
+}
+
+.pill__option--active {
+	background-color: #073b4c;
+	color: white;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Barriecito&display=swap');
