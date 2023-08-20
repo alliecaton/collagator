@@ -1,15 +1,19 @@
 import React from 'react'
 import '@/styles/App.css'
 import Search from '@/components/Search'
-import AppHeader from '@/components/AppHeader'
+import AppHero from '@/components/AppHero'
 
 function App() {
 	return (
 		<div className='app'>
-			<header className='app__header'>
-				<AppHeader />
+			<div className='header'>COLLAGER</div>
 
-				<Search />
+			<header className='app__header'>
+				<AppHero />
+
+				<div className='main-container'>
+					<Search />
+				</div>
 			</header>
 		</div>
 	)

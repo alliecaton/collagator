@@ -10,6 +10,7 @@ function Search() {
 	const [count, setCount] = useState<number>(20)
 
 	const submitQuery = (e: FormEvent<HTMLFormElement>) => {
+		e.preventDefault()
 		setFormData({ query: query, count: count })
 	}
 
@@ -23,38 +24,46 @@ function Search() {
 
 	return (
 		<>
-			<p>
-				Search for a random set of photos, or search with a query for a narrower
-				selection.
-			</p>
+			<div className='search-container'>
+				<p>
+					Search for a random set of photos, or search with a query for a
+					narrower selection.
+				</p>
 
-			<form className='form' onSubmit={e => submitQuery(e)}>
-				<div className='inputs'>
-					<input
-						type='text'
-						className='search-input'
-						name='query'
-						placeholder='i.e. forest'
-						value={query}
-						onChange={e => setQuery(e.target.value)}
-					/>
-
-					<div className='inputs__counter'>
-						<button onClick={decrement}> - </button>
+				<form className='form' onSubmit={e => submitQuery(e)}>
+					<div className='inputs'>
 						<input
 							type='text'
 							className='search-input'
-							name='count'
-							value={count}
-							onChange={e => setCount(Number(e.target.value))}
+							name='query'
+							placeholder='i.e. forest'
+							value={query}
+							onChange={e => setQuery(e.target.value)}
 						/>
-						<button onClick={increment}> + </button>
+
+						<div className='inputs__counter'>
+							<div className='inputs__counter-button dec' onClick={decrement}>
+								{' '}
+								-{' '}
+							</div>
+							<input
+								type='text'
+								className='search-input'
+								name='count'
+								value={count}
+								onChange={e => setCount(Number(e.target.value))}
+							/>
+							<div className='inputs__counter-button inc' onClick={increment}>
+								{' '}
+								+{' '}
+							</div>
+						</div>
 					</div>
-				</div>
-				<button type='submit' className='form__button'>
-					SEARCH
-				</button>
-			</form>
+					<button type='submit' className='form__button'>
+						APPLY
+					</button>
+				</form>
+			</div>
 
 			<SearchResults formData={formData} />
 		</>
