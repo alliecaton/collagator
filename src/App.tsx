@@ -1,5 +1,6 @@
 import React from 'react'
 import '@/styles/App.css'
+import '@/styles/Globals.scss'
 import Search from '@/components/Search'
 import AppHero from '@/components/AppHero'
 

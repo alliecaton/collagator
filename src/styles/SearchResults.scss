@@ -1,15 +1,44 @@
 .images {
 	display: flex;
-	gap: 15px;
+	gap: 30px;
 	flex-wrap: wrap;
 	align-items: center;
 }
 
+.image-input:checked + .image {
+	outline: solid 2px black;
+}
+
+.image-input {
+	display: none;
+}
+
 .image {
 	border-radius: 4px;
+	transition: 0.1s outline;
 
 	&:hover {
 		cursor: pointer;
-		outline: solid 2px blue;
+		outline: solid 2px black;
 	}
+}
+
+.export {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.export-button {
+	margin-bottom: 30px;
+	justify-self: flex-end;
+}
+
+.credits {
+	font-size: 12px;
+	color: black;
+}
+
+.credits__link {
+	color: black;
+	text-decoration: underline;
 }

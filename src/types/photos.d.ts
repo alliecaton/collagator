@@ -1,5 +1,6 @@
 export interface Photo {
 	id: string
+	slug: string
 	created_at: string
 	updated_at: string
 	width: number

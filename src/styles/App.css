@@ -1,3 +1,5 @@
+/* Globals */
+
 body {
 	background-color: white;
 	min-height: 100vh;
@@ -16,6 +18,10 @@ body {
 	border-bottom: solid 1px black;
 	font-family: 'ADLaM Display', cursive;
 	font-size: 36px;
+}
+
+.app {
+	padding-bottom: 50px;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap');

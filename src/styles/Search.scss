@@ -7,14 +7,35 @@
 	gap: 20px;
 }
 
+.input {
+	padding: 10px 8px;
+	border: 1px solid black;
+}
+
+.search-input {
+	flex-basis: 300px;
+	border-radius: 4px;
+}
+
 .inputs__counter {
 	display: flex;
 	gap: 5px;
 }
 
 .inputs__counter-button {
-	background-color: red;
+	display: flex;
+	flex-direction: flex-col;
+	justify-content: center;
+	align-items: center;
 	padding: 0 8px;
+	border: 1px solid black;
+	transition: 0.3s background-color;
+
+	&:hover {
+		color: white;
+		background-color: black;
+		cursor: pointer;
+	}
 }
 
 .inc {

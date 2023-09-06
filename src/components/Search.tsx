@@ -34,7 +34,7 @@ function Search() {
 					<div className='inputs'>
 						<input
 							type='text'
-							className='search-input'
+							className='search-input input'
 							name='query'
 							placeholder='i.e. forest'
 							value={query}
@@ -48,7 +48,7 @@ function Search() {
 							</div>
 							<input
 								type='text'
-								className='search-input'
+								className='input'
 								name='count'
 								value={count}
 								onChange={e => setCount(Number(e.target.value))}
@@ -59,7 +59,7 @@ function Search() {
 							</div>
 						</div>
 					</div>
-					<button type='submit' className='form__button'>
+					<button type='submit' className='form__button button'>
 						APPLY
 					</button>
 				</form>
