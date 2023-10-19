@@ -19,22 +19,21 @@ function SearchResults({ formData }: { formData: Payload }) {
 
   useEffect(() => {
     async function fetchData() {
-      console.log('hit')
-      // axios({
-      //   method: 'get',
-      //   url: process.env.REACT_APP_UNSPLASH_BASE_URL + '/photos/random',
-      //   headers: {
-      //     Authorization: `Client-ID ${process.env.REACT_APP_UNSPLASH_ACCESS_KEY}`,
-      //   },
-      //   params: formData,
-      // }).then(
-      //   (res) => {
-      //     setImages(res.data)
-      //   },
-      //   (error) => {
-      //     console.error(error)
-      //   }
-      // )
+      axios({
+        method: 'get',
+        url: process.env.REACT_APP_UNSPLASH_BASE_URL + '/photos/random',
+        headers: {
+          Authorization: `Client-ID ${process.env.REACT_APP_UNSPLASH_ACCESS_KEY}`,
+        },
+        params: formData,
+      }).then(
+        (res) => {
+          setImages(res.data)
+        },
+        (error) => {
+          console.error(error)
+        }
+      )
     }
 
     fetchData()
