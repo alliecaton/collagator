@@ -1,17 +1,23 @@
 .hero {
-	max-width: 1240px;
-	margin: 0 auto;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 50px;
-	gap: 30px;
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  gap: 30px;
+}
+
+@media (max-width: 920px) {
+  .hero {
+    flex-wrap: wrap;
+  }
 }
 
 .hero__image {
-	width: 550px;
+  width: 550px;
 }
 
 .divider {
-	border-bottom: solid 1px black;
+  border-bottom: solid 1px black;
 }

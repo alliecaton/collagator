@@ -1,44 +1,44 @@
 .images {
-	display: flex;
-	gap: 30px;
-	flex-wrap: wrap;
-	align-items: center;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .image-input:checked + .image {
-	outline: solid 2px black;
+  outline: solid 3px rgb(17, 120, 255);
 }
 
 .image-input {
-	display: none;
+  display: none;
 }
 
 .image {
-	border-radius: 4px;
-	transition: 0.1s outline;
+  border-radius: 4px;
+  transition: 0.1s outline;
 
-	&:hover {
-		cursor: pointer;
-		outline: solid 2px black;
-	}
+  &:hover {
+    cursor: pointer;
+    outline: solid 2px black;
+  }
 }
 
 .export {
-	display: flex;
-	justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .export-button {
-	margin-bottom: 30px;
-	justify-self: flex-end;
+  margin-bottom: 30px;
+  justify-self: flex-end;
 }
 
 .credits {
-	font-size: 12px;
-	color: black;
+  font-size: 12px;
+  color: black;
 }
 
 .credits__link {
-	color: black;
-	text-decoration: underline;
+  color: black;
+  text-decoration: underline;
 }

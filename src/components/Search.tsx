@@ -3,71 +3,84 @@ import SearchResults from '@/components/SearchResults'
 import '@/styles/Search.scss'
 
 function Search() {
-	// Query is what we use to actually query the API with
-	const [formData, setFormData] = useState({ query: '', count: 20 })
+  // Query is what we use to actually query the API with
+  const [formData, setFormData] = useState({ query: '', count: 20 })
 
-	const [query, setQuery] = useState<string>('')
-	const [count, setCount] = useState<number>(20)
+  const [error, setError] = useState<string>('')
 
-	const submitQuery = (e: FormEvent<HTMLFormElement>) => {
-		e.preventDefault()
-		setFormData({ query: query, count: count })
-	}
+  const [query, setQuery] = useState<string>('')
+  const [count, setCount] = useState<number>(20)
 
-	const decrement = () => {
-		setCount(prevCount => prevCount - 1)
-	}
+  const submitQuery = (e: FormEvent<HTMLFormElement>) => {
+    if (count === 0 || count > 50) {
+      setError('Count needs to be between 1 annd 50')
+    }
 
-	const increment = () => {
-		setCount(prevCount => prevCount + 1)
-	}
+    e.preventDefault()
+    setFormData({ query: query, count: count })
+  }
 
-	return (
-		<>
-			<div className='search-container'>
-				<p>
-					Search for a random set of photos, or search with a query for a
-					narrower selection.
-				</p>
+  const decrement = () => {
+    if (count > 1) {
+      setCount((prevCount) => prevCount - 1)
+    }
+  }
 
-				<form className='form' onSubmit={e => submitQuery(e)}>
-					<div className='inputs'>
-						<input
-							type='text'
-							className='search-input input'
-							name='query'
-							placeholder='i.e. forest'
-							value={query}
-							onChange={e => setQuery(e.target.value)}
-						/>
+  const increment = () => {
+    if (count < 50) {
+      setCount((prevCount) => prevCount + 1)
+    }
+  }
 
-						<div className='inputs__counter'>
-							<div className='inputs__counter-button dec' onClick={decrement}>
-								{' '}
-								-{' '}
-							</div>
-							<input
-								type='text'
-								className='input'
-								name='count'
-								value={count}
-								onChange={e => setCount(Number(e.target.value))}
-							/>
-							<div className='inputs__counter-button inc' onClick={increment}>
-								{' '}
-								+{' '}
-							</div>
-						</div>
-					</div>
-					<button type='submit' className='form__button button'>
-						APPLY
-					</button>
-				</form>
-			</div>
+  return (
+    <>
+      <div className="search-container">
+        <p>
+          Search for a random set of photos, or search with a query for a
+          narrower selection.
+        </p>
 
-			<SearchResults formData={formData} />
-		</>
-	)
+        <form className="form" onSubmit={(e) => submitQuery(e)}>
+          <div className="inputs">
+            <input
+              type="text"
+              className="search-input input"
+              name="query"
+              placeholder="i.e. forest"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+            />
+
+            <div className="inputs__counter">
+              <div className="inputs__counter-button dec" onClick={decrement}>
+                {' '}
+                -{' '}
+              </div>
+              <input
+                type="text"
+                className="input"
+                name="count"
+                value={count}
+                onChange={(e) => setCount(Number(e.target.value))}
+              />
+              <div className="inputs__counter-button inc" onClick={increment}>
+                {' '}
+                +{' '}
+              </div>
+            </div>
+          </div>
+
+          <div className="error">{error}</div>
+
+          <button type="submit" className="form__button button">
+            APPLY
+          </button>
+        </form>
+      </div>
+
+      <SearchResults formData={formData} />
+    </>
+  )
 }
 
 export default Search
