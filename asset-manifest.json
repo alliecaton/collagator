@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/collager/static/css/main.1ce6292a.css",
+    "main.js": "/collager/static/js/main.b07cc0e6.js",
+    "static/media/hero-image.png": "/collager/static/media/hero-image.c75c53bd86b6953d25b1.png",
+    "index.html": "/collager/index.html",
+    "main.1ce6292a.css.map": "/collager/static/css/main.1ce6292a.css.map",
+    "main.b07cc0e6.js.map": "/collager/static/js/main.b07cc0e6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1ce6292a.css",
+    "static/js/main.b07cc0e6.js"
+  ]
+}
