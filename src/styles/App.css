@@ -1,27 +1,26 @@
 /* Globals */
 
 body {
-	background-color: white;
-	min-height: 100vh;
-	font-family: 'Space Grotesk', sans-serif;
+  background-color: white;
+  min-height: 100vh;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 .main-container {
-	max-width: 1240px;
-	margin: 0 auto;
-	padding: 0 50px;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 50px;
 }
 
 .header {
-	padding: 15px 20px;
-	width: 100%;
-	border-bottom: solid 1px black;
-	font-family: 'ADLaM Display', cursive;
-	font-size: 36px;
+  padding: 15px 20px;
+  border-bottom: solid 1px black;
+  font-family: 'ADLaM Display', cursive;
+  font-size: 36px;
 }
 
 .app {
-	padding-bottom: 50px;
+  padding-bottom: 50px;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap');
