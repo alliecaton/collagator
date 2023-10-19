@@ -8,16 +8,20 @@
   gap: 30px;
 }
 
-@media (max-width: 920px) {
-  .hero {
-    flex-wrap: wrap;
-  }
-}
-
 .hero__image {
   width: 550px;
 }
 
 .divider {
   border-bottom: solid 1px black;
+}
+
+@media (max-width: 920px) {
+  .hero {
+    flex-wrap: wrap;
+  }
+
+  .hero__image {
+    width: 100%;
+  }
 }
