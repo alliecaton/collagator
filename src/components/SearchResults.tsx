@@ -127,8 +127,10 @@ function SearchResults({ formData }: { formData: Payload }) {
                   photo by{' '}
                   <a
                     className="credits__link"
+                    target="_blank"
+                    rel="noreferrer"
                     href={
-                      img.user.portfolio_url +
+                      img.user.links.html +
                       '?utm_source=collager&utm_medium=referral'
                     }
                   >
@@ -137,6 +139,8 @@ function SearchResults({ formData }: { formData: Payload }) {
                   on{' '}
                   <a
                     className="credits__link"
+                    target="_blank"
+                    rel="noreferrer"
                     href="https://unsplash.com?utm_source=collager&utm_medium=referral"
                   >
                     Unsplash
@@ -144,8 +148,10 @@ function SearchResults({ formData }: { formData: Payload }) {
                   <div>
                     <a
                       className="credits__link"
+                      target="_blank"
+                      rel="noreferrer"
                       href={
-                        img.urls.raw +
+                        img.links.html +
                         '?utm_source=collager&utm_medium=referral'
                       }
                     >
